@@ -1,0 +1,295 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(54, 54, 54);
+}
+
+input:focus{
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.divider {
+    margin-top: 2%;
+}
+
+.divider_m5 {
+    margin-top: 10%;
+}
+
+h2{
+    padding-top: 20px;
+    text-align: center;
+    color: #222E50;
+    padding-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+a {
+    color: #880044;
+}
+
+*::selection {
+    background: rgba(243, 24, 24, 0.75);
+    /*#1B2F33;*/
+    color: white;
+}
+
+/* Firefox */
+*::-moz-selection {
+    background: rgba(20,20,20,0.25);
+    color: black;
+}
+
+/* Contenedor */
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/*Cabecera*/
+
+#nav {
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    margin: 0px auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#nav img {
+    height: 100px;
+}
+
+.menu ul li{
+    padding: 15px;
+    margin: 0px auto;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.menu ul li a {
+    color: #363946;
+    padding: 18px;
+    transition: all .2s;
+    font-weight: 500;
+}
+
+.menu ul li a:hover {
+    color: white;
+    background-color: #EF3054;
+}
+
+#nav h1 {
+    padding: 15px;
+    font-size: 16px;
+    color: #242331;
+    float: right;
+    padding-right: 40px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    text-align: center;
+}
+
+/* Body */
+
+.body {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 100vh;
+}
+
+.body p {
+    text-align: center;
+}
+
+.boton_normal {
+    padding: 10px 40px 10px 40px;
+    transition: all .3s;
+    border-radius: 20px;
+    border: 1px solid #EF3054;
+    overflow: hidden;
+}
+
+.boton_normal:hover {
+    background-color: #EF3054;
+    color: white;
+    cursor: pointer;
+}
+
+.settings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.options_settings {
+    padding: 20px;
+    text-align: center;
+}
+
+.options_settings a {
+    color: #011627;
+    font-weight: bold;
+}
+
+.not-generated {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#opciones_select {
+    border: 1px solid #ccc;
+    background-color: #E9ECEF;
+    padding: 5px;
+    color: #4d194d;
+    text-align: center;
+}
+
+#opciones_select:hover {
+    border: 1px solid #888;
+    cursor: pointer;
+}
+
+.triangulo_izquierda {
+    display: block;
+    width: 100% !important;
+    height: auto;
+    display: none;
+}
+
+.imagen_triangulo {
+    width: 40%;
+    padding-left: 10%;
+    float: left;
+}
+
+#triangulo_izquierda {
+    height: 250px;
+}
+
+.form_div {
+    float: right;
+    margin-top: -25px;
+    padding-right: 15%;
+    width: 35%;
+}
+
+#form_aal, #form_lla, #form {
+    padding: 25px;
+    border: 1px solid #586F7C;
+}
+
+input[type=submit] {
+    background-color: white;
+}
+
+#form_aal p, #form_lla p, #form p {
+    padding: 7px;
+}
+
+.angulo1, .angulo2, .lado1, .lado2 {
+    padding: 6px 20px 6px 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #586F7C;
+    transition: all .1s;
+}
+
+.angulo1:focus, .angulo2:focus, .lado1:focus, .lado2:focus {
+    padding: 6px 30px 6px 30px;
+    border: 2px solid /*#04724D*/ #00458B !important;
+}
+
+.options_gotten {
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+#error_dunno {
+
+}
+
+.errores_input {
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+.show_result {
+    display: none;
+    border-top: 1px solid #ccc;
+}
+
+.results {
+    width: 100%;
+    margin-top: 3%;
+}
+
+.results h3 {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 2px solid #083D77;
+    background-color: #3C474B;
+    text-align: center;
+    color: white;
+}
+
+.generar_triangulo {
+    display: block;
+    height: 100%;
+}
+
+.calculator {
+    width: 100%;
+    height: 50vh;
+}
+
+#valores {
+    margin-top: 40px !important;
+    width: 60%;
+    border: 2px solid #14213d;
+    padding: 30px;
+    margin-right: 10px;
+    margin: 0px auto;
+    margin-bottom: 5%;
+}
+
+#valores span {
+    text-align: center;
+    font-size: 20px;
+}
+
+#valores p, i {
+    text-align: center;
+    font-size: 25px;
+    color: #EA3546;
+}
+

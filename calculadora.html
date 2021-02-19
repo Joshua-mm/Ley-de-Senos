@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ley de Senos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <!--Contenedor-->
+    <div class="container">
+        <!--Cabecera-->
+        <div id="nav">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="ley_de_cosenos.html">Ley de Cosenos</a></li>
+                    <li><a href="ejemplos.html">Ejemplos</a></li>
+                    <li><a href="calculadora.html">Calculadora</a></li>
+                </ul>
+            </nav>
+            <h1><b>Ley de Senos</b></h1>
+        </div>
+        <div class="divider"></div>
+        <!--Cuerpo-->
+        <div class="body">
+            <h2>Calculador de triángulos - Ley de Senos</h2>
+            <p>
+                Esta aplicación resolverá los triangulos que necesites, proporcionando los parametros necesarios.<br>
+                Si los datos que proporcionas no son acordes a los necesitados para resolver el triángulo con ley de
+                senos
+                tal vez necesites utilizar otras leyes.<br><br>
+                <small>¿No sabes cuáles son los requisitos para resolver un triángulo con ley de senos? <br>
+                    Descubrelo <a target="blank" href="ley_de_cosenos.html">Aquí</a></small>
+            </p>
+            <br><br>
+            <hr>
+            <div class="divider"></div>
+            <div class="calculator">
+                <div class="settings">
+                    <div class="options_settings">
+                        <a id="opciones">Resultado en: </a>
+                        <select id="opciones_select">
+                            <option value="grados">Grados</option>
+                            <option value="radianes">Radianes</option>
+                        </select>
+                    </div>
+                    <!--<div class="options_settings">
+                                <a id="opciones">Orientación: </a>
+                                <select id="opciones_select">
+                                    <option value="derecha">Derecha</option>
+                                    <option value="izquierda">Izquierda</option>
+                                </select>
+                            </div>-->
+                    <div class="options_settings opt_set_2">
+                        <a id="opciones">Qué datos tienes: </a>
+                        <select id="opciones_select" class="datos_obt">
+                            <option value="lla">LLA</option>
+                            <option value="aal">AAL</option>
+                            <option value="dunno">No lo sé</option>
+                        </select>
+                    </div>
+                    <div class="options_gotten">
+                        <p>
+                            Opciones Seleccionadas: <span id="opts"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="generar_triangulo">
+                    <div class="not-generated">
+                        <a class="boton_normal" id="generar_triangulo_boton">Generar Triángulo</a>
+                    </div>
+                    <div class="triangulo_izquierda">
+                        <div class="imagen_triangulo">
+                            <img src="img/izquierda.png" id="triangulo_izquierda">
+                        </div>
+                        <div class="form_div">
+                            <!--AAL-->
+                            <form action="" id="form_aal" onsubmit="return false;">
+                                <p>
+                                    Escribe tus datos a continuación...
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Angulo A" autocomplete="off" id="angulo1_aal"
+                                        class="angulo1">
+                                    <span id="error_angulo1_aal" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Angulo B" autocomplete="off" id="angulo2_aal"
+                                        class="angulo2">
+                                    <span id="error_angulo2_aal" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Lado a" autocomplete="off" id="lado1_aal"
+                                        class="lado1">
+                                    <span id="error_lado1_aal" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <br>
+                                    <input type="submit" value="Calcular" class="boton_normal calcular_triangulo1">
+                                </p>
+                            </form>
+                            <!--LLA-->
+                            <form action="" id="form_lla" onsubmit="return false;">
+                                <p>
+                                    Escribe tus datos a continuación...
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Angulo A" autocomplete="off" id="angulo1_lla"
+                                        class="angulo1">
+                                    <span id="error_angulo1_lla" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Lado a" autocomplete="off" id="lado1_lla"
+                                        class="lado1">
+                                    <span id="error_lado1_lla" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Lado b" autocomplete="off" id="lado2_lla"
+                                        class="lado2">
+                                    <span id="error_lado2_lla" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <br>
+                                    <input type="submit" value="Calcular" class="boton_normal calcular_triangulo2">
+                                </p>
+                            </form>
+                            <!--No lo sé-->
+                            <form action="" id="form" onsubmit="return false;">
+                                <span id="error_dunno"></span>
+                                <p>
+                                    Escribe tus datos a continuación...
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Angulo A" autocomplete="off" id="angulo1"
+                                        class="angulo1">
+                                    <span id="error_angulo1" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Angulo B" autocomplete="off" id="angulo2"
+                                        class="angulo2">
+                                    <span id="error_angulo2" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Lado a" autocomplete="off" id="lado1" class="lado1">
+                                    <span id="error_lado1" class="errores_input"></span>
+                                </p>
+                                <p>
+                                    <input type="text" placeholder="Lado b" autocomplete="off" id="lado2" class="lado2">
+                                    <span id="error_lado2"></span>
+                                </p>
+                                <p>
+                                    <br>
+                                    <input type="submit" value="Calcular" class="boton_normal calcular_triangulo3">
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider_m5"></div>
+
+            <div class="divider"></div>
+            <div class="show_result">
+                <div class="results">
+                    <h3>Resultados</h3>
+                    <div id="valores">
+                        <p>
+                             A: <span id="A"></span> B: <span id="B"></span> C: <span id="C"></span>
+                        </p>
+                        <p>
+                             <i>a: </i><span id="a"></span> <i>b: </i><span id="b"></span> <i>c: </i><span id="c"></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/triangulos.js"></script>
+</body>
+
+</html>
